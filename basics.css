@@ -73,13 +73,18 @@ body{
     width: 0;
     background: whitesmoke;
     position: absolute;
-    left: 0;
+    left: 50%;
     bottom: -8px;
-    transition: 0.4s;
+    transition: 0.2s;
+    transform: translateX(-50%); /* Centers the pseudo-element */
 }
+
 .navbar ul li:hover::after{
     width: 100%;
+    left: 50%; /* Starts from the center */
+    transform: translateX(-50%); /* Keeps the pseudo-element centered */
 }
+
 
 
 /* Content regarding Navbar/Wallpaper (ABOVE) */
