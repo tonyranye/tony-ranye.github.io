@@ -1,0 +1,127 @@
+@import url(basics.css);
+
+.container{
+    display: flex;
+    gap: 3rem;
+
+    position: relative;
+    background-color: rgba(12, 9, 10, 0.5);
+    margin: auto;
+    top: 80px;
+
+    width:70%;
+    min-height: 380px;
+    padding: 15px;
+    border: 5px solid black;
+    flex-wrap: nowrap;
+}
+
+.text-container{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    justify-content: center; /* centers vertically */
+    gap: 1rem; /* spacing between h1 and p*/
+    color: aliceblue;
+}
+
+.name-heading{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: xxx-large;
+    color: wheat;
+    margin: 0;
+}
+
+.about-me{
+    font-size: large;
+    margin: 0;
+}
+
+.profile_pic{
+    
+    position: relative;
+    width: 20%;
+    height: 40%;
+}
+
+.email-link{
+    text-decoration: none;
+    color: wheat;
+}
+
+.email-link:hover{
+    text-decoration: underline;
+}
+
+/*Cave Page Content*/
+
+.media-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.media-scroller {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.media {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem 0;
+}
+
+.media-card {
+    flex: 0 0 250px; /* Fixed width */
+    height: 350px; /* Fixed height */
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+    position: relative; /* For absolute positioning of title */
+}
+
+.media-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* This will crop images to fit */
+}
+
+.media-card h3 {
+    padding: 0.5rem;
+    margin: 0;
+    font-size: 1rem;
+    text-align: center;
+    background: rgba(0,0,0,0.7);
+    color: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.scroll-arrow {
+    background: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    width: 40px;
+    height: 350px; /* Match card height */
+    border-radius: 0;
+    font-size: 1.2rem;
+    cursor: pointer;
+    z-index: 1;
+    transition: background 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+

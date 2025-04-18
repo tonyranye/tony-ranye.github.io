@@ -9,13 +9,12 @@ html{
     overflow: hidden;
     font-family: 'Times New Roman', Times, serif;
     overflow-y: scroll;
-
 }
 
 body{
 
     background-image: linear-gradient(rgba(0, 0, 0, 0.627),rgba(0, 0, 0, 0.5)),
-    url("img/brightcityjpg.jpg");
+    url("../img/brightcityjpg.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -44,12 +43,11 @@ body{
 }
 
 
-.otech{
-    max-width:100%;
-    max-height:100%;
-
-    width: 11%;
-    height: auto;
+.otech {
+    height: 50px;         /* or use clamp() for responsiveness */
+    width: auto;
+    object-fit: contain;  /* ensures aspect ratio is preserved */
+    display: block;       /* removes any unwanted inline spacing */
 }
 
 
