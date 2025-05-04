@@ -3,7 +3,9 @@ document.addEventListener('DOMContentLoaded', function() {
         { title: "The Wire", imageUrl: "img/wire.jpg" },
         { title: "Princess Mononoke", imageUrl: "img/mono.jpg" },
         { title: "Mr. Robot", imageUrl: "img/robot.jpg" },
-        { title: "The Bad Batch", imageUrl: "img/batch.png" }
+        { title: "The Bad Batch", imageUrl: "img/batch.png" },
+        { title: "Andor", imageUrl: "img/andor.jpg"},
+        {title: "Severance", imageUrl: "img/severance.jpg"}
     ];
 
     const mediaContainer = document.querySelector('.media');
