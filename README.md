@@ -18,4 +18,8 @@ I'm actively seeking an internship or entry-level opportunities where I can appl
 - Dedicated pages for **Projects**, **Experience**, and **Cave**
 - Easy access to my contact email
 
-## 📁 File Structure
+## 📸 Images
+![image](https://github.com/user-attachments/assets/6a81ae3e-b50e-43f4-bfbc-737d563a0521)
+
+![image](https://github.com/user-attachments/assets/eecd94bb-ec14-407e-b56c-ff0dcf650048)
+
