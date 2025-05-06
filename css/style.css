@@ -51,6 +51,38 @@
     text-decoration: underline;
 }
 
+
+
+.my_links {
+    display: flex;
+    gap: 20px;             /* Adds consistent spacing */
+    padding-left: 0;       /* Remove default list padding */
+    margin: 0;             /* Reset margin */
+    transform: translateY(10px); /* Moves down 10px without affecting layout */
+
+}
+
+.my_links li {
+    list-style: none;
+    margin: 0; /* Remove manual margins */
+}
+
+.my_links li a {
+    display: flex;       /* Helps with alignment */
+}
+
+.my_links img {
+    width: 64px; /* Force same width */
+    height: 64px; /* Force same height */
+    object-fit: contain; /* Prevents distortion */
+    transition: transform 0.2s ease; /* Smooth hover animation */
+
+}
+
+.my_links img:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover (10%) */
+}
+
 /*Cave Page Content*/
 
 

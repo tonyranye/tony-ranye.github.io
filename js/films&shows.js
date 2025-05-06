@@ -5,7 +5,8 @@ document.addEventListener('DOMContentLoaded', function() {
         { title: "Mr. Robot", imageUrl: "img/robot.jpg" },
         { title: "The Bad Batch", imageUrl: "img/batch.png" },
         { title: "Andor", imageUrl: "img/andor.jpg"},
-        {title: "Severance", imageUrl: "img/severance.jpg"}
+        {title: "Severance", imageUrl: "img/severance.jpg"},
+        {title: "Dark Souls 3", imageUrl: "img/ds3.jpg"}
     ];
 
     const mediaContainer = document.querySelector('.media');
