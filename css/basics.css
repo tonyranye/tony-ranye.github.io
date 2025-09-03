@@ -14,7 +14,7 @@ html{
 body{
 
     background-image: linear-gradient(rgba(0, 0, 0, 0.627),rgba(0, 0, 0, 0.5)),
-    url("../img/brightcityjpg.jpg");
+    url("../img/Toronto-Sunset.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -27,7 +27,7 @@ body{
     background-color:#0C090A;
     background-size: cover;
     width: 100%;
-    height: 50px;
+    height: 38px;
     font-family: "Lucida Console", "Courier New", monospace;
 }
 

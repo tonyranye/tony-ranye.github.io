@@ -59,6 +59,8 @@
     padding-left: 0;       /* Remove default list padding */
     margin: 0;             /* Reset margin */
     transform: translateY(10px); /* Moves down 10px without affecting layout */
+    width: 90px;
+    height: 85px;
 
 }
 
@@ -72,8 +74,8 @@
 }
 
 .my_links img {
-    width: 64px; /* Force same width */
-    height: 64px; /* Force same height */
+    width: 90px; /* Force same width */
+    height: 85px; /* Force same height */
     object-fit: contain; /* Prevents distortion */
     transition: transform 0.2s ease; /* Smooth hover animation */
 
