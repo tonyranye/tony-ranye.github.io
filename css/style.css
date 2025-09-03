@@ -85,6 +85,76 @@
     transform: scale(1.1); /* Slightly enlarge on hover (10%) */
 }
 
+
+
+/* Projects Section Content*/
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.project-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 20px;
+    color: aliceblue;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 20px rgba(0,0,0,0.4);
+}
+
+.project-card h2 {
+    color: wheat;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.project-card p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 10px;
+}
+
+.tags span {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 0.85rem;
+}
+
+.project-btn {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: wheat;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.project-btn:hover {
+    background-color: gold;
+}
+
+
 /*Cave Page Content*/
 
 
