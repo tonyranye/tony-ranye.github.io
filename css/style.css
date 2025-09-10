@@ -71,6 +71,10 @@
 
 .my_links li a {
     display: flex;       /* Helps with alignment */
+    flex-direction: column;
+    align-items: center;
+    color: White;
+    font-size: large;
 }
 
 .my_links img {
@@ -175,7 +179,7 @@
     gap: 1rem;
     padding: 1rem;
     position: relative;
-    max-width: 1200px;
+    max-width: 710px;
     margin: 0 auto;
 }
 
@@ -194,8 +198,8 @@
 }
 
 .media-card {
-    flex: 0 0 250px; /* Fixed width */
-    height: 350px; /* Fixed height */
+    flex: 0 0 150px; /* Fixed width */
+    height: 150px; /* Fixed height */
     display: flex;
     flex-direction: column;
     border-radius: 8px;
@@ -229,7 +233,7 @@
     color: white;
     border: none;
     width: 40px;
-    height: 350px; /* Match card height */
+    height: 150px; /* Match card height */
     border-radius: 0;
     font-size: 1.2rem;
     cursor: pointer;

@@ -1,12 +1,12 @@
 document.addEventListener('DOMContentLoaded', function() {
     const mediaItems = [
-        { title: "The Wire", imageUrl: "img/wire.jpg" },
-        { title: "Princess Mononoke", imageUrl: "img/mono.jpg" },
-        { title: "Mr. Robot", imageUrl: "img/robot.jpg" },
-        { title: "The Bad Batch", imageUrl: "img/batch.png" },
-        { title: "Andor", imageUrl: "img/andor.jpg"},
-        {title: "Severance", imageUrl: "img/severance.jpg"},
-        {title: "Dark Souls 3", imageUrl: "img/ds3.jpg"}
+        { title: "Python", imageUrl: "img/Python-logo.png" },
+        { title: "SQL", imageUrl: "img/sql-logo.png" },
+        { title: "C++", imageUrl: "img/C++Logo.png" },
+        { title: "Java", imageUrl: "img/java-logo.png"},
+        {title: "HTML", imageUrl: "img/HTML-logo.png"},
+        {title: "CSS", imageUrl: "img/css-logo.png"},
+        {title: "JavaScript", imageUrl:  "img/JavaScript-Logo.png"}
     ];
 
     const mediaContainer = document.querySelector('.media');
@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
         title.textContent = item.title;
 
         card.appendChild(img);
-        card.appendChild(title);
+        // card.appendChild(title);
         mediaContainer.appendChild(card);
 
         // item.addEventListener('click', () =>{
