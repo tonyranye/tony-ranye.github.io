@@ -1,9 +1,10 @@
 document.addEventListener('DOMContentLoaded', function() {
     const mediaItems = [
         { title: "Python", imageUrl: "img/Python-logo.png" },
-        { title: "SQL", imageUrl: "img/sql-logo.png" },
+        {title: "C", imageUrl: "img/C_Programming_Language.svg.png"},
         { title: "C++", imageUrl: "img/C++Logo.png" },
         { title: "Java", imageUrl: "img/java-logo.png"},
+        { title: "SQL", imageUrl: "img/sql-logo.png" },
         {title: "HTML", imageUrl: "img/HTML-logo.png"},
         {title: "CSS", imageUrl: "img/css-logo.png"},
         {title: "JavaScript", imageUrl:  "img/JavaScript-Logo.png"}

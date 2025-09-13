@@ -9,12 +9,14 @@
     margin: auto;
     top: 80px;
 
-    width:70%;
+    width: 1200px;
     min-height: 380px;
     padding: 15px;
     border: 5px solid black;
     flex-wrap: nowrap;
 }
+
+
 
 .text-container{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -36,7 +38,7 @@
 }
 
 .profile_pic{
-    
+
     position: relative;
     width: 20%;
     height: 40%;
@@ -78,6 +80,7 @@
 }
 
 .my_links img {
+    display: flex;
     width: 90px; /* Force same width */
     height: 85px; /* Force same height */
     object-fit: contain; /* Prevents distortion */
@@ -113,9 +116,13 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.project-card li{
+    list-style: none;
+}
+
 .project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0px 8px 20px rgba(0,0,0,0.4);
+    transform: scale(1.03);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
 
 .project-card h2 {
@@ -125,7 +132,7 @@
 }
 
 .project-card p {
-    font-size: 1rem;
+    font-size: 1.1rem;
     margin-bottom: 10px;
 }
 
@@ -170,7 +177,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100px; /* Adjust as needed */
+    height: 20px; /* Adjust as needed */
 }
 
 .media-container {
@@ -243,5 +250,200 @@
     align-items: center;
     justify-content: center;
 }
+
+.resume-preview{
+    display: flex;
+    justify-content: center;
+    margin: 80px 0;
+}
+
+.resume-preview {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+.resume-box {
+    position: relative;
+    width: 400px;
+    height: 500px;
+    border: 2px solid #ddd;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.resume-box iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    pointer-events: none; /* Prevents interacting with PDF inside preview */
+}
+
+.resume-box:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.6);
+    color: white;
+    text-align: center;
+    padding: 12px;
+    font-size: 16px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.resume-box:hover .overlay {
+    opacity: 1;
+}
+
+.download-button a {
+    display: inline-block;
+    background-color: wheat;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.download-button a:hover {
+    background: linear-gradient(135deg, gold, orange);
+    transform: translateY(-3px); /* lift effect */
+    box-shadow: 0 6px 14px rgba(0,0,0,0.3);
+}
+
+/* Resume Section Layout */
+.resume-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 3rem;
+    padding: 2rem;
+    background-color: rgba(12, 9, 10, 0.5);
+    border: 5px solid black;
+    max-width: 1200px;
+    margin: 80px auto;
+    border-radius: 15px;
+}
+
+
+
+
+.resume-box {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    height: 250px;
+    border: 2px solid #ddd;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.resume-box iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    pointer-events: none;
+}
+
+.resume-box:hover {
+    transform: scale(1.03) rotate(-1deg);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    text-align: center;
+    padding: 12px;
+    font-size: 16px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.resume-box:hover .overlay {
+    opacity: 1;
+}
+
+/* Download Button Styling */
+.download-button a {
+    display: inline-block;
+    background-color: wheat;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.download-button a:hover {
+    background: linear-gradient(135deg, gold, orange);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+}
+
+
+
+.resume-content-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 10px;
+    color: aliceblue;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.resume-content-card-wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding: 40px;
+    margin-top: 2rem;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.resume-content-card:hover{
+    transform: scale(1.03);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+
+.resume-content-card h2 {
+    color: wheat;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.resume-content-card p {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+
+
+
 
 
