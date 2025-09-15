@@ -1,26 +1,28 @@
 @import url(basics.css);
 
-.container{
+.container {
     display: flex;
-    gap: 3rem;
-
-    position: relative;
+    flex-wrap: wrap; /* allow content to wrap on smaller screens */
+    gap: 2rem;
     background-color: rgba(12, 9, 10, 0.5);
-    margin: auto;
-    top: 80px;
-
-    width: 1200px;
-    min-height: 380px;
+    margin: 40px auto;
     padding: 15px;
     border: 5px solid black;
-    flex-wrap: nowrap;
+    max-width: 1200px;  /* responsive max width */
+    width: 90%;         /* take 90% of screen on mobile */
+    top: auto;          /* remove fixed top offset for better stacking */
+    position: relative;
 }
 
 
 
+
 .text-container{
+    flex: 1;
+    flex-direction: column;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     justify-content: center; /* centers vertically */
+    min-width: 250px;
     gap: 1rem; /* spacing between h1 and p*/
     color: aliceblue;
 }
@@ -37,12 +39,19 @@
     margin: 0;
 }
 
-.profile_pic{
-
-    position: relative;
-    width: 20%;
-    height: 40%;
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
+
+.profile_pic {
+    width: clamp(150px, 25%, 250px); /* responsive width between 150-250px */
+    height: auto;
+    border-radius: 12px; /* optional: round corners for a modern look */
+    margin: 0 auto; /* center on small screens */
+}
+
 
 .email-link{
     text-decoration: none;
@@ -97,13 +106,8 @@
 /* Projects Section Content*/
 
 .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
-    width: 70%;
-    margin-left: auto;
-    margin-right: auto;
+    width: 95%;
+    margin: 0 auto;
 }
 
 .project-card {
@@ -441,6 +445,24 @@
     font-size: 1.1rem;
     margin-bottom: 10px;
 }
+
+@media (max-width: 768px) {
+    .resume-content-card-wrapper {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar ul {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+}
+
+
 
 
 
