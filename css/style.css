@@ -1,471 +1,361 @@
-@import url(basics.css);
+/* style.css (formatted + de-duplicated essentials) */
+@import url("basics.css");
 
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base */
+html {
+  height: 100%;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+body {
+  display: grid;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding-bottom: 135px;
+  font-family: "Times New Roman", Times, serif;
+}
+
+/* Navbar bar */
+.border {
+  position: fixed;
+  inset: 0 0 auto 0;
+  height: 3.2rem;
+  width: 100%;
+  background-color: white;
+  ;
+  opacity: 0.9;
+  z-index: 1000;
+}
+
+.site-name {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  color: black;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+/* Nav */
+.navbar {
+  position: absolute;
+  top: 6px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding: 4px 0;
+  font-family: "Lucida Console", "Courier New", monospace;
+  font-size: 1rem;
+  color: white;
+}
+
+.navbar ul {
+  list-style: none;
+}
+
+.navbar ul li {
+  display: inline-block;
+  margin: 0 20px;
+  position: relative;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: black;
+  text-transform: uppercase;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.navbar ul li::after {
+  content: "";
+  height: 2px;
+  width: 0;
+  background: black;
+  position: absolute;
+  left: 50%;
+  bottom: -8px;
+  transition: 0.4s;
+  transform: translateX(-50%);
+}
+
+.navbar ul li:hover::after {
+  width: 100%;
+}
+
+/* Layout containers */
 .container {
-    display: flex;
-    flex-wrap: wrap; /* allow content to wrap on smaller screens */
-    gap: 2rem;
-    background-color: rgba(12, 9, 10, 0.5);
-    margin: 40px auto;
-    padding: 15px;
-    border: 5px solid black;
-    max-width: 1200px;  /* responsive max width */
-    width: 90%;         /* take 90% of screen on mobile */
-    top: auto;          /* remove fixed top offset for better stacking */
-    position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin: 40px auto;
+  padding: 15px;
+  max-width: 100%;
+  width: 100%;
+  position: centered;
+}
+
+.container h1{  
+    color: black;
 }
 
 
+/* only the first banner */
+.am_banner {
+  margin-top: 0;            /* pushes it below your fixed navbar */
+  background-image: url("../img/shade.jpg");
+  background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 
 
-.text-container{
-    flex: 1;
-    flex-direction: column;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    justify-content: center; /* centers vertically */
-    min-width: 250px;
-    gap: 1rem; /* spacing between h1 and p*/
-    color: aliceblue;
+  /* put any banner-only styling here */
 }
 
-.name-heading{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: xxx-large;
-    color: wheat;
-    margin: 0;
+/* banner-only text tweaks (optional examples) */
+.am_banner .name-heading {
+  font-size: 3.25rem;
+  margin-top: 10rem;
 }
 
-.about-me{
-    font-size: large;
-    margin: 0;
+.am_banner .about-me {
+  max-width: 65ch;
+  color: white;
 }
 
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
+.banner {
+  width: 100%;
+  height: auto;
+  margin-top: 4rem; /* keeps content below fixed navbar */
 }
 
-.profile_pic {
-    width: clamp(150px, 25%, 250px); /* responsive width between 150-250px */
-    height: auto;
-    border-radius: 12px; /* optional: round corners for a modern look */
-    margin: 0 auto; /* center on small screens */
+.text-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  min-width: 250px;
+  justify-content: center;
+  color: aliceblue;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.name-heading {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 3rem;
+  color: wheat;
+}
+
+.about-me {
+  font-size: 1.1rem;
+}
+
+.text-large {
+  font-size: 1.2rem;
+}
+
+/* Links */
+.email-link {
+  text-decoration: none;
+
+  color: wheat;
 }
 
 
-.email-link{
-    text-decoration: none;
-    color: wheat;
+.email-link:hover {
+  text-decoration: underline;
 }
 
-.email-link:hover{
-    text-decoration: underline;
-}
-
-
-
+/* Social icons */
 .my_links {
-    display: flex;
-    gap: 20px;             /* Adds consistent spacing */
-    padding-left: 0;       /* Remove default list padding */
-    margin: 0;             /* Reset margin */
-    transform: translateY(10px); /* Moves down 10px without affecting layout */
-    width: 90px;
-    height: 85px;
-
-}
-
-.my_links li {
-    list-style: none;
-    margin: 0; /* Remove manual margins */
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  padding-left: 0;
+  margin-top: 10px;
 }
 
 .my_links li a {
-    display: flex;       /* Helps with alignment */
-    flex-direction: column;
-    align-items: center;
-    color: White;
-    font-size: large;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  font-size: 1rem;
+  text-decoration: none;
 }
 
 .my_links img {
-    display: flex;
-    width: 90px; /* Force same width */
-    height: 85px; /* Force same height */
-    object-fit: contain; /* Prevents distortion */
-    transition: transform 0.2s ease; /* Smooth hover animation */
-
+  width: 90px;
+  height: 85px;
+  object-fit: contain;
+  transition: transform 0.2s ease;
 }
 
 .my_links img:hover {
-    transform: scale(1.1); /* Slightly enlarge on hover (10%) */
+  transform: scale(1.1);
 }
 
-
-
-/* Projects Section Content*/
-
+/* Projects */
 .projects-grid {
-    width: 95%;
-    margin: 0 auto;
+  width: 95%;
+  margin: 0 auto;
+  display: grid;
+  gap: 1.5rem;
 }
 
 .project-card {
-    background: rgba(255, 255, 255, 0.05);
-    border: 2px solid rgba(255, 255, 255, 0.2);
-    border-radius: 15px;
-    padding: 20px;
-    color: aliceblue;
-    box-shadow: 0px 4px 12px rgba(0,0,0,0.3);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.project-card li{
-    list-style: none;
+  background: #193857;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  padding: 20px;
+  color: bl;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: white;
+  
 }
 
 .project-card:hover {
-    transform: scale(1.03);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 .project-card h2 {
-    color: wheat;
-    margin-bottom: 10px;
-    font-size: 1.5rem;
-}
-
-.project-card p {
-    font-size: 1.1rem;
-    margin-bottom: 10px;
+  color: wheat;
+  margin-bottom: 10px;
+  font-size: 1.5rem;
 }
 
 .tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    margin-bottom: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 10px;
 }
 
 .tags span {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 4px 10px;
-    border-radius: 12px;
-    font-size: 0.85rem;
+  background: grey;
+  opacity: 0.9;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.85rem;
 }
 
 .project-btn {
-    display: inline-block;
-    padding: 10px 15px;
-    background-color: wheat;
-    color: black;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 8px;
-    transition: background-color 0.3s ease;
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: wheat;
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
 }
 
 .project-btn:hover {
-    background-color: gold;
+  background-color: gold;
 }
 
-
-/*Cave Page Content*/
-
-
-
-.film_p{
-    color: white;
-    font-size: x-large;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 70px; /* Adjust as needed */
+/* Resume */
+.resume-content-card-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding: 40px 0;
+  width: 75%;
+  position: centered;
 }
 
-.media-container {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    padding: 1rem;
-    position: relative;
-    max-width: 710px;
-    margin: 0 auto;
+.resume-content-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  padding: 16px;
+  color: black;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.media-scroller {
-    display: flex;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-}
-
-.media {
-    display: flex;
-    gap: 1rem;
-    padding: 1rem 0;
-}
-
-.media-card {
-    flex: 0 0 150px; /* Fixed width */
-    height: 150px; /* Fixed height */
-    display: flex;
-    flex-direction: column;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    transition: transform 0.2s;
-    position: relative; /* For absolute positioning of title */
-}
-
-.media-card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* This will crop images to fit */
-}
-
-.media-card h3 {
-    padding: 0.5rem;
-    margin: 0;
-    font-size: 1rem;
-    text-align: center;
-    background: rgba(0,0,0,0.7);
-    color: white;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-}
-
-.scroll-arrow {
-    background: rgba(0,0,0,0.5);
-    color: white;
-    border: none;
-    width: 40px;
-    height: 150px; /* Match card height */
-    border-radius: 0;
-    font-size: 1.2rem;
-    cursor: pointer;
-    z-index: 1;
-    transition: background 0.2s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.resume-preview{
-    display: flex;
-    justify-content: center;
-    margin: 80px 0;
+.resume-content-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 .resume-preview {
-    display: flex;
-    justify-content: center;
-    margin: 40px 0;
+  display: flex;
+  justify-content: center;
 }
 
 .resume-box {
-    position: relative;
-    width: 400px;
-    height: 500px;
-    border: 2px solid #ddd;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  width: 400px;
+  height: 500px;
+  border: 2px solid #ddd;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .resume-box iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
-    pointer-events: none; /* Prevents interacting with PDF inside preview */
+  width: 100%;
+  height: 100%;
+  border: none;
+  pointer-events: none;
 }
 
 .resume-box:hover {
-    transform: scale(1.03);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 .overlay {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    background: rgba(0,0,0,0.6);
-    color: white;
-    text-align: center;
-    padding: 12px;
-    font-size: 16px;
-    opacity: 0;
-    transition: opacity 0.3s ease;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  text-align: center;
+  padding: 12px;
+  font-size: 16px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 .resume-box:hover .overlay {
-    opacity: 1;
+  opacity: 1;
 }
 
-.download-button a {
-    display: inline-block;
-    background-color: wheat;
-    color: black;
-    font-weight: bold;
-    text-decoration: none;
-    padding: 12px 24px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    transition: all 0.3s ease;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+.download-button {
+  margin-top: 1rem;
 }
 
-.download-button a:hover {
-    background: linear-gradient(135deg, gold, orange);
-    transform: translateY(-3px); /* lift effect */
-    box-shadow: 0 6px 14px rgba(0,0,0,0.3);
-}
-
-/* Resume Section Layout */
-.resume-section {
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar ul {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 3rem;
-    padding: 2rem;
-    background-color: rgba(12, 9, 10, 0.5);
-    border: 5px solid black;
-    max-width: 1200px;
-    margin: 80px auto;
-    border-radius: 15px;
-}
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+    margin-right: 10px;
+  }
 
+  .resume-content-card-wrapper {
+    grid-template-columns: 1fr;
+    padding: 20px 0;
+  }
 
-
-
-.resume-box {
-    position: relative;
+  .resume-box {
     width: 100%;
     max-width: 400px;
-    height: 250px;
-    border: 2px solid #ddd;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 500px;
+  }
 }
-
-.resume-box iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
-    pointer-events: none;
-}
-
-.resume-box:hover {
-    transform: scale(1.03) rotate(-1deg);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-}
-
-.overlay {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.6);
-    color: white;
-    text-align: center;
-    padding: 12px;
-    font-size: 16px;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.resume-box:hover .overlay {
-    opacity: 1;
-}
-
-/* Download Button Styling */
-.download-button a {
-    display: inline-block;
-    background-color: wheat;
-    color: black;
-    font-weight: bold;
-    text-decoration: none;
-    padding: 12px 24px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease;
-    text-align: center;
-}
-
-.download-button a:hover {
-    background: linear-gradient(135deg, gold, orange);
-    transform: translateY(-3px);
-    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
-}
-
-
-
-.resume-content-card {
-    background: rgba(255, 255, 255, 0.05);
-    border: 2px solid rgba(255, 255, 255, 0.2);
-    border-radius: 15px;
-    padding: 10px;
-    color: aliceblue;
-    box-shadow: 0px 4px 12px rgba(0,0,0,0.3);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-
-.resume-content-card-wrapper{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    padding: 40px;
-    margin-top: 2rem;
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.resume-content-card:hover{
-    transform: scale(1.03);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-}
-
-
-.resume-content-card h2 {
-    color: wheat;
-    margin-bottom: 10px;
-    font-size: 1.5rem;
-}
-
-.resume-content-card p {
-    font-size: 1.1rem;
-    margin-bottom: 10px;
-}
-
-@media (max-width: 768px) {
-    .resume-content-card-wrapper {
-        grid-template-columns: 1fr;
-        padding: 20px;
-    }
-}
-
-@media (max-width: 768px) {
-    .navbar ul {
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-        text-align: center;
-    }
-}
-
-
-
-
-
-
-
-
