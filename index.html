@@ -1,4 +1,4 @@
-<!-- index.html (formatted + fixed structure) -->
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -7,56 +7,67 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta
       name="description"
-      content="Portfolio of Tony Akinniranye - Computer Science undergraduate specializing in data analysis, cybersecurity, and web development."
+      content="Portfolio of Tony Akinniranye - Computer Science undergraduate specializing in Data analysis, Software development."
     />
     <meta
       name="keywords"
-      content="Computer Science, Portfolio, Internship, Programming, Python, Java, Web Development"
+      content="Computer Science, Portfolio, Internship, Programming, Python, Java, Data Science, Cybersecurity"
     />
     <meta name="theme-color" content="#000000" />
 
-    <link rel="stylesheet" href="css/style.css?v=1.0" />
+    <link rel="stylesheet" href="css/style.css?v=2.0" />
     <title>Tony A. Akinniranye</title>
   </head>
 
   <body>
-    <!-- HOME -->
-    <section id="home">
-      <header class="border">
-        <h1 class="site-name">Tony Akinniranye</h1>
-
-        <nav class="navbar">
+    <!-- NAV -->
+    <header class="border">
+      <h1 class="site-name">Tony Akinniranye</h1>
+        <nav class="navbar" aria-label="Primary">
           <ul>
-            <li><a href="#home">ABOUT ME</a></li>
+            <li><a href="#home">ABOUT</a></li>
             <li><a href="#skills">SKILLS</a></li>
             <li><a href="#projects">PROJECTS</a></li>
             <li><a href="#resume">RESUME</a></li>
             <li><a href="#contact">CONTACT</a></li>
           </ul>
         </nav>
-      </header>
 
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" type="button">
+          <span class="icon sun" aria-hidden="true">☀</span>
+          <span class="icon moon" aria-hidden="true">☾</span>
+        </button>
+
+
+
+
+
+    </header>
+
+    <!-- HOME -->
+    <section id="home">
       <article class="container am_banner">
         <div class="text-container">
-          <h1 class="name-heading"></h1>
-          <p class="about-me">Computer Science Undergraduate Student</p>
+          <h1 class="name-heading">Tony Akinniranye</h1>
+          <p class="about-me role-line">Computer Science Undergraduate Student</p>
 
           <p class="about-me">
-            I'm a passionate and hardworking Computer Science student at Ontario
-            Tech University. I'm specializing in Computer Networking and Data
-            Science.
+            I am a Computer Science student at Ontario Tech University, focused on
+            Computer Networking and Data Science. I like building clean, practical projects
+            and learning tools that make systems faster, safer, and easier to use.
           </p>
 
-          <p style="color: white;">
+          
+
+          <p class="contact-line">
             My Email:
-            <a href="mailto:tonyakinn05@gmail.com" class="email-link"
-              >tonyakinn05@gmail.com</a>
+            <a href="mailto:tonyakinn05@gmail.com" class="email-link">tonyakinn05@gmail.com</a>
           </p>
 
-          <ul class="my_links">
+          <ul class="my_links" aria-label="Social links">
             <li>
               <a href="https://github.com/tonyranye" target="_blank" rel="noreferrer">
-                <img src="img/github-brands-solid-full.svg" alt="GitHub" />
+                <img src="img/logos/github-brands-solid-full.svg" alt="GitHub icon" />
                 <span>GitHub</span>
               </a>
             </li>
@@ -67,203 +78,282 @@
                 target="_blank"
                 rel="noreferrer"
               >
-                <img src="img/linkedinLogo.png" alt="LinkedIn" />
+                <img src="img/logos/linkedinLogo.png" alt="LinkedIn icon" />
                 <span>LinkedIn</span>
               </a>
             </li>
           </ul>
+
+          <div class="quick-actions">
+            <a class="project-btn" href="#projects">See Projects</a>
+            <a class="project-btn ghost" href="#contact">Contact Me</a>
+          </div>
         </div>
       </article>
     </section>
 
-    <!-- SKILLS (placeholder section so your navbar link works) -->
+    <!-- SKILLS -->
     <section id="skills">
-      <article class="container">
-        <div class="text-container">
-          <h1 class="name-heading">SKILLS</h1>
-          <p class="about-me">Add your skills content here.</p>
+      <article class="container section-surface">
+        <div class="text-container dark-text">
+          <h1 class="name-heading dark-title">SKILLS</h1>
+
+          <p class="about-me dark-text">
+            Tools and skills I use across software development, data work, and networking projects.
+          </p>
+
+          <div class="skills-grid">
+            <div class="skill-card">
+              <h2>Languages</h2>
+              <div class="pill-row">
+                <span class="pill">C++</span>
+                <span class="pill">Python</span>
+                <span class="pill">Java</span>
+                <span class="pill">C</span>
+                <span class="pill">SQL</span>
+                <span class="pill">HTML</span>
+                <span class="pill">CSS</span>
+                <span class="pill">JavaScript</span>
+                <span class="pill">Dart</span>
+              </div>
+            </div>
+
+            <div class="skill-card">
+              <h2>Frameworks and Libraries</h2>
+              <div class="pill-row">
+                <span class="pill">PyTorch</span>
+                <span class="pill">Pandas</span>
+                <span class="pill">Numpy</span>
+                <span class="pill">Matplotlib</span>
+                <span class="pill">Geopandas</span>
+                <span class="pill">Java Swing</span>
+                <span class="pill">SQLite</span>
+                <span class="pill">Flutter</span>
+                
+              </div>
+            </div>
+
+            <div class="skill-card">
+              <h2>Core Strengths</h2>
+              <ul class="clean-list">
+                <li>Data cleaning, analysis, and visualization</li>
+                <li>Object-oriented design and debugging</li>
+                <li>Building small systems end to end (UI, logic, storage)</li>
+                <li>Team projects, iteration planning, and testing</li>
+              </ul>
+            </div>
+
+            <div class="skill-card">
+              <h2>Tools</h2>
+              <div class="pill-row">
+                <span class="pill">Git and GitHub</span>
+                <span class="pill">Linux CLI</span>
+                <span class="pill">Maven</span>
+                <span class="pill">Jupyter notebooks</span>
+                <span class="pill">DB Browser (SQL)</span>
+                <span class="pill">VS Code</span>
+                <span class="pill">IntelliJ IDEA</span>
+                <span class="pill">Android Studio</span>
+
+              </div>
+            </div>
+          </div>
         </div>
       </article>
     </section>
 
     <!-- PROJECTS -->
     <section id="projects">
-      <article class="container">
-        <div class="text-container">
-          <h1 class="name-heading">PROJECTS</h1>
+      <article class="container section-surface">
+        <div class="text-container dark-text">
+          <h1 class="name-heading dark-title">PROJECTS</h1>
+
+          <p class="about-me dark-text">
+            A mix of machine learning, data analysis, and software projects. Each card includes a space for a screenshot or banner image.
+          </p>
 
           <div class="projects-grid">
-
-
-            <!-- ANIMAAI PROJECT -->
+            <!-- ANIMAAI -->
             <div class="project-card">
-              <h2>AnimaAI</h2>
+              <div class="project-media">
+                <!-- Replace with a real image later -->
+                <img src="img/projects/animai-1.jpg" alt="AnimaAI project screenshot" onerror="this.style.display='none'; this.parentElement.classList.add('media-fallback');" />
+              </div>
 
+              <h2>AnimaAI</h2>
               <p>
-                Smart Animal Classifier (AnimaAI) is a deep-learning system that identifies
-                animals from images using a hierarchical pipeline of specialized convolutional
-                neural networks (CNNs).
+                A deep-learning animal image classifier built with a structured pipeline of convolutional neural networks.
+                Instead of forcing one model to learn everything, the system routes images through specialized models to improve accuracy.
               </p>
 
-                <p>
-                Instead of relying on a single classifier to recognize dozens of species and
-                breeds, the model routes an image through multiple networks to produce a more
-                accurate prediction.
-                </p>
-
-                <p>The system is capable of:</p> <br>
-
-                <ul class="feature-list" style="margin-left: 2rem;">
-                    <li>🐶 Classifying 70+ dog breeds</li>
-                    <li>🦋 Classifying 70+ butterfly species</li>
-                    <li>🐱 Recognizing multiple cat breeds</li>
-                    <li>🐦 Identifying various bird families</li>
-                    <li>🐾 Classifying 14 general animal categories</li>
-                </ul> <br>
-
-                <p>
-                This makes it suitable for wildlife research tools, educational apps, and
-                automated image-sorting systems.
-                </p><br>
-
+              <ul class="feature-list">
+                <li>Hierarchical classification approach for better predictions</li>
+                <li>Supports multiple animal groups (dogs, birds, cats, butterflies, general classes)</li>
+                <li>GPU and CPU compatible inference flow</li>
+              </ul>
 
               <div class="tags">
-                <span>Pytorch</span><span>Machine deep-learning</span><span>CNN</span>
+                <span>PyTorch</span><span>Deep Learning</span><span>CNN</span>
               </div>
-              <a
-                href="https://github.com/tonyranye/meteorite-analysis"
-                target="_blank"
-                rel="noreferrer"
-                class="project-btn"
-                >View on GitHub</a
-              >
+
+              <a href="https://github.com/tonyranye/AnimaAI" target="_blank" rel="noreferrer" class="project-btn">
+                View on GitHub
+              </a>
             </div>
 
             <!-- METEORITE ANALYSIS -->
-
             <div class="project-card">
+              <div class="project-media">
+                <img src="img/projects/meteorite-1.jpg" alt="Meteorite Analysis project screenshot" onerror="this.style.display='none'; this.parentElement.classList.add('media-fallback');" />
+              </div>
+
               <h2>Meteorite Analysis</h2>
               <p>
-                Analyzes meteorite landing data using Python, Pandas, and
-                Matplotlib to uncover patterns in size, location, and frequency.
-              </p><br>
+                A data analysis project exploring historical meteorite landings to uncover trends in impact year, location, and mass.
+                Includes visualizations and geospatial plotting to make patterns easier to understand.
+              </p>
+
+              <ul class="feature-list">
+                <li>Data wrangling with Pandas and visualization with Matplotlib</li>
+                <li>Geospatial exploration with GeoPandas and Shapely</li>
+                <li>Clear charts to summarize where and when meteorites land</li>
+              </ul>
 
               <div class="tags">
-                <span>Python</span><span>Pandas</span><span>Data Visualization</span>
+                <span>Python</span><span>Pandas</span><span>Data Viz</span><span>GeoPandas</span><span>Matplotlib</span><span>Numpy</span>
               </div>
-              <a
-                href="https://github.com/tonyranye/meteorite-analysis"
-                target="_blank"
-                rel="noreferrer"
-                class="project-btn"
-                >View on GitHub</a>
+
+              <a href="https://github.com/tonyranye/meteorite-analysis" target="_blank" rel="noreferrer" class="project-btn">
+                View on GitHub
+              </a>
             </div>
 
-            <!-- HABIT TRACKER APP -->
-
+            <!-- FILE SHARER -->
             <div class="project-card">
-              <h2>Habit Tracker App</h2>
-              <p>
-                Mobile app built with dart Native that helps users set, track, and
-                achieve personal habits and goals through reminders and progress visualization.
-              </p><br>
-
-              <div class="tags">
-                <span>Dart</span><span> API</span><span>SQLite</span>
+              <div class="project-media">
+                <img src="img/projects/fileshare-1.jpg" alt="File Sharer project screenshot" onerror="this.style.display='none'; this.parentElement.classList.add('media-fallback');" />
               </div>
-              <a
-                href="https://github.com/tonyranye/"
-                target="_blank"
-                rel="noreferrer"
-                class="project-btn"
-                >View on GitHub</a>
-            </div>
 
-
-            <div class="project-card">
               <h2>File Sharer</h2>
               <p>
-                Mobile app built with dart Native that helps users set, track, and
-                achieve personal habits and goals through reminders and progress visualization.
-              </p><br>
+                A course project focused on building a simple file sharing workflow with a clean interface and reliable file handling.
+                Designed around clarity, correct validation, and predictable behavior.
+              </p>
+
+              <ul class="feature-list">
+                <li>Upload and share flow with validation and error handling</li>
+                <li>Clear separation between UI and core logic</li>
+                <li>Structured to support future features (accounts, permissions, history)</li>
+              </ul>
 
               <div class="tags">
-                <span>Dart</span><span> API</span><span>SQLite</span>
+                <span>Java</span><span>Course Project</span><span>Systems</span>
               </div>
+
               <a
                 href="https://github.com/OntarioTech-CS-program/w25-csci2020u-assignment02-a2-chan-mcconachie-akinniranye"
                 target="_blank"
                 rel="noreferrer"
                 class="project-btn"
-                >View on GitHub</a>
+              >
+                View on GitHub
+              </a>
             </div>
 
-
+            <!-- EMAIL SPAM DETECTOR -->
             <div class="project-card">
+              <div class="project-media">
+                <img src="img/projects/spamdetector-1.png" alt="Email Spam Detector project screenshot" onerror="this.style.display='none'; this.parentElement.classList.add('media-fallback');" />
+              </div>
+
               <h2>Email Spam Detector</h2>
               <p>
-                Mobile app built with dart Native that helps users set, track, and
-                achieve personal habits and goals through reminders and progress visualization.
-              </p><br>
+                A spam detection project that classifies messages based on common spam signals and text patterns.
+                Built to be testable and explainable, with clean input handling and repeatable evaluation.
+              </p>
+
+              <ul class="feature-list">
+                <li>Text preprocessing pipeline (normalization, token handling)</li>
+                <li>Spam classification based on extracted features</li>
+                <li>Designed for clear testing and accuracy checks</li>
+              </ul>
 
               <div class="tags">
-                <span>Dart</span><span> API</span><span>SQLite</span>
+                <span>Python</span><span>NLP Basics</span><span>Classification</span>
               </div>
+
               <a
                 href="https://github.com/OntarioTech-CS-program/w25-csci2020u-assignment01-a1-chan-mcconachie-akinniranye"
                 target="_blank"
                 rel="noreferrer"
                 class="project-btn"
-                >View on GitHub</a>
+              >
+                View on GitHub
+              </a>
             </div>
 
-
-
-            
-
-
-
-            <!-- VIDEO GAME CATALOGYE -->
+            <!-- STEAM GAMES CATALOGUE -->
             <div class="project-card">
+              <div class="project-media">
+                <img src="img/projects/gamecatalog.jpg" alt="Steam Games Catalogue project screenshot" onerror="this.style.display='none'; this.parentElement.classList.add('media-fallback');" />
+              </div>
+
               <h2>Steam Games Catalogue</h2>
               <p>
-                Collaborative project that allows users to explore and manage a
-                library of video games, complete with rating and search
-                features.
-              </p><br>
+                A team-built desktop catalogue app that lets users browse a game library with sorting, searching, and add-game features.
+                Built in Java using a Swing UI and backed by SQLite.
+              </p>
+
+              <ul class="feature-list">
+                <li>Java Swing UI with a card-style game display</li>
+                <li>SQLite database storage and retrieval</li>
+                <li>Sorting and searching tools to navigate the library</li>
+              </ul>
+
               <div class="tags">
-                <span>React</span><span>Node.js</span><span>Team Project</span>
+                <span>Java</span><span>Swing</span><span>SQLite</span><span>Team Project</span>
               </div>
+
               <a
                 href="https://github.com/AidanMcConachie/chillteam7-game-catalog"
                 target="_blank"
                 rel="noreferrer"
                 class="project-btn"
-                >View on GitHub</a>
+              >
+                View on GitHub
+              </a>
             </div>
 
-
-
-            <!-- ONLINE CONNECT 4 GAME -->
+            <!-- ONLINE CONNECT 4 -->
             <div class="project-card">
+              <div class="project-media">
+                <img src="img/projects/connect4-2.png" alt="Online Connect 4 project screenshot" onerror="this.style.display='none'; this.parentElement.classList.add('media-fallback');" />
+              </div>
+
               <h2>Online Connect 4 Game</h2>
               <p>
-                Team-based software systems development project from Ontario Tech
-                University’s CSCI2020U course, focused on collaborative system
-                design and implementation.
-              </p><br>
+                A collaborative software systems project focused on building an online Connect 4 experience.
+                Emphasis on clean design, teamwork, and reliable client-server communication.
+              </p>
+
+              <ul class="feature-list">
+                <li>Socket-based multiplayer gameplay</li>
+                <li>MVC-style separation of UI, logic, and communication</li>
+                <li>Built with team iteration planning and testing</li>
+              </ul>
 
               <div class="tags">
-                <span>Java</span><span>OOP</span><span>Socket Programming</span
-                ><span>MVC</span><span>Team Project</span>
+                <span>Java</span><span>Sockets</span><span>MVC</span><span>Team Project</span>
               </div>
+
               <a
                 href="https://github.com/OntarioTech-CS-program/w25-csci2020u-finalproject-w25-team20"
                 target="_blank"
                 rel="noreferrer"
                 class="project-btn"
-                >View on GitHub</a
               >
+                View on GitHub
+              </a>
             </div>
           </div>
         </div>
@@ -272,42 +362,52 @@
 
     <!-- RESUME -->
     <section id="resume">
-      <article class="container">
-        <div class="text-container">
-          <h1 class="name-heading">RESUME</h1>
+      <article class="container section-surface">
+        <div class="text-container dark-text">
+          <h1 class="name-heading dark-title">RESUME</h1>
 
-          <p class="about-me">
-            Here's a snapshot of my professional experience and skills. Click
-            below to view or download my full resume.
+          <p class="about-me dark-text">
+            Here is a quick snapshot of my experience. You can view the full PDF or download it.
           </p>
 
           <div class="resume-content-card-wrapper">
             <div class="resume-content-card">
-              <h2>Key Skills & Highlights</h2>
-              <p class="text-large">
-                Proficient in Python, C++, Java, SQL, HTML, CSS, JavaScript
+              <h2>Career Objective</h2>
+              <p>
+                Motivated Computer Science undergraduate seeking internship or junior developer
+                opportunities in software engineering, data analysis, or cybersecurity, with
+                hands-on experience in machine learning, systems development, and collaborative projects.
               </p>
-              <p>Strong problem-solving and algorithm design background</p>
-              <p>Experience with data analysis, visualization, and web development</p>
-              <p>Team player with Agile and collaborative project experience</p>
-            </div>
+
+              <h2 style="margin-top: 14px;">Project Highlights</h2>
+              <ul class="clean-list">
+                <li>Built a deep-learning animal classifier using PyTorch with hierarchical CNN routing</li>
+                <li>Developed a Java-based video game catalogue with SQLite storage, sorting, and search</li>
+                <li>Implemented a client-server Connect 4 game using sockets and MVC architecture</li>
+                <li>Performed meteorite landing analysis using Pandas and Matplotlib to visualize trends</li>
+                <li>Created an email spam detection system using text preprocessing and classification</li>
+              </ul>
+
+              <h2 style="margin-top: 14px;">Relevant Coursework</h2>
+              <ul class="clean-list">
+                <li>Software Systems Development & Integration</li>
+                <li>Data Structures and Algorithms</li>
+                <li>Machine Learning Theory and Application I</li>
+                <li>Sotware Design & Analysis</li>
+                <li>Scientific Data Analysis</li>
+              </ul>
+</div>
+
 
             <div class="resume-content-card">
               <div class="resume-preview">
-                <a
-                  href="files/TC%20Tony%20Akinniranye%20Resume.pdf"
-                  target="_blank"
-                  rel="noreferrer"
-                >
+                <a href="files/TC%20Tony%20Akinniranye%20Resume.pdf" target="_blank" rel="noreferrer">
                   <div class="resume-box">
                     <iframe
                       src="files/TC%20Tony%20Akinniranye%20Resume.pdf#toolbar=0&navpanes=0&scrollbar=0"
                       title="Resume Preview"
                     ></iframe>
-
-                    <div class="overlay">
-                      <p>View Full Resume</p>
-                    </div>
+                    <div class="overlay"><p>View Full Resume</p></div>
                   </div>
                 </a>
               </div>
@@ -315,27 +415,96 @@
           </div>
 
           <div class="download-button">
-            <a
-              href="files/TC%20Tony%20Akinniranye%20Resume.pdf"
-              download
-              class="project-btn"
-              >Download Resume</a
-            >
+            <a href="files/TC%20Tony%20Akinniranye%20Resume.pdf" download class="project-btn">
+              Download Resume
+            </a>
           </div>
         </div>
       </article>
     </section>
 
-    <!-- CONTACT (placeholder section so your navbar link works) -->
+    <!-- CONTACT -->
     <section id="contact">
-      <article class="container">
-        <div class="text-container">
-          <h1 class="name-heading">CONTACT</h1>
-          <p class="about-me">Add your contact content here.</p>
+      <article class="container section-surface">
+        <div class="text-container dark-text">
+          <h1 class="name-heading dark-title">CONTACT</h1>
+
+          <p class="about-me dark-text">
+            Want to reach out about an internship, project, or collaboration? Send a message here or email me directly.
+          </p>
+
+          <div class="contact-grid">
+            <div class="contact-card">
+              <h2>Contact Info</h2>
+              <p>
+                Email:
+                <a class="email-link dark-link" href="mailto:tonyakinn05@gmail.com">tonyakinn05@gmail.com</a>
+              </p>
+
+              <p>GitHub: <a class="dark-link" href="https://github.com/tonyranye" target="_blank" rel="noreferrer">github.com/tonyranye</a></p>
+              <p>LinkedIn: <a class="dark-link" href="https://www.linkedin.com/in/tony-akinniranye-090a1730a/" target="_blank" rel="noreferrer">View Profile</a></p>
+
+              <div class="contact-note">
+                <p class="small">
+                  Typical response time: within 24 to 48 hours.
+                </p>
+              </div>
+            </div>
+
+            <div class="contact-card">
+              <h2>Message Me</h2>
+
+              <!-- Simple mailto form (no backend needed) -->
+              <form
+                class="contact-form"
+                action="mailto:tonyakinn05@gmail.com"
+                method="post"
+                enctype="text/plain"
+              >
+                <label>
+                  Your Name
+                  <input type="text" name="name" placeholder="Your name" required />
+                </label>
+
+                <label>
+                  Your Email
+                  <input type="email" name="email" placeholder="you@example.com" required />
+                </label>
+
+                <label>
+                  Message
+                  <textarea name="message" rows="6" placeholder="Write your message..." required></textarea>
+                </label>
+
+                <button class="project-btn" type="submit">Send</button>
+              </form>
+
+            
+            </div>
+          </div>
+          
+                    <!-- Contact GIF Placeholder -->
+          <div class="contact-gif-wrap">
+            <div class="gif-frame">
+              <img
+                src="img/200w.gif"
+                alt="Contact animation"
+                onerror="this.style.display='none'; this.parentElement.classList.add('gif-fallback');"
+              />
+            </div>
+          </div>
+
+
         </div>
       </article>
     </section>
 
     <script src="js/languages.js" defer></script>
+    <script src="js/languages.js" defer></script>
+    <script src="js/langTicker.js" defer></script>
+    <script src="js/themeToggle.js" defer></script>
+
+
+
   </body>
 </html>
