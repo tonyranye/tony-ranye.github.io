@@ -1,0 +1,92 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    height: 100%;
+    overflow: hidden;
+    font-family: 'Times New Roman', Times, serif;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+body{
+
+    background-image: url("../img/v996-009.jpg");
+    opacity: 0.9;
+    display: grid;
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat;
+    background-attachment: fixed;
+    padding-bottom: 135px;
+
+}
+
+
+
+.navbar {
+    width: 100%;
+    position: absolute;
+    top: 6px;
+    display: flex;
+    justify-content: right; /* centers the ul */
+    align-items: right;
+    padding: 4px 0;
+    font-family: "Lucida Console", "Courier New", monospace;
+    font-size: 1rem;
+}
+
+
+.otech {
+    height: 50px;         /* or use clamp() for responsiveness */
+    width: auto;
+    object-fit: contain;  /* ensures aspect ratio is preserved */
+    display: block;       /* removes any unwanted inline spacing */
+}
+
+
+
+.navbar ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+
+
+}
+
+.navbar ul li::after{
+    content: '';
+    height: 2px;
+    width: 0;
+    background: white;
+    position: absolute;
+    left: 50%;
+    bottom: -8px;
+    transition: 0.4s;
+    transform: translateX(-50%); /* Centers the pseudo-element */
+}
+
+.navbar ul li:hover::after{
+    width: 100%;
+    left: 50%; /* Starts from the center */
+    transform: translateX(-50%); /* Keeps the pseudo-element centered */
+}
+
+.text-large{
+    font-size: 1.2rem;
+}
+
+
+/* Content regarding Navbar/Wallpaper (ABOVE) */
