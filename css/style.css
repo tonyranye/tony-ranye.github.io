@@ -561,6 +561,63 @@ body {
   margin-top: 10px;
 }
 
+/* Hamburger menu button (hidden by default, shown on mobile) */
+.menu-toggle {
+  display: none;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  z-index: 1001;
+  width: 40px;
+  height: 40px;
+}
+
+.hamburger {
+  display: block;
+  position: relative;
+  width: 28px;
+  height: 3px;
+  background-color: black;
+  transition: 0.3s;
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: '';
+  position: absolute;
+  width: 28px;
+  height: 3px;
+  background-color: black;
+  transition: 0.3s;
+}
+
+.hamburger::before {
+  top: -8px;
+}
+
+.hamburger::after {
+  top: 8px;
+}
+
+/* Animate hamburger to X when active */
+.menu-toggle.active .hamburger {
+  background-color: transparent;
+}
+
+.menu-toggle.active .hamburger::before {
+  transform: rotate(45deg);
+  top: 0;
+}
+
+.menu-toggle.active .hamburger::after {
+  transform: rotate(-45deg);
+  top: 0;
+}
+
 /* Responsive */
 @media (max-width: 900px) {
   .projects-grid {
@@ -581,6 +638,62 @@ body {
 
   .navbar ul li {
     margin: 0 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Show hamburger menu button on mobile */
+  .menu-toggle {
+    display: block;
+  }
+  
+  /* Hide navbar by default on mobile */
+  .navbar {
+    position: fixed;
+    top: 3.2rem;
+    right: 0;
+    width: 100%;
+    max-width: 300px;
+    background-color: white;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(100%);
+    transition: transform 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
+    box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
+    padding: 20px 0;
+    height: calc(100vh - 3.2rem);
+    overflow-y: auto;
+  }
+  
+  /* Show navbar when active */
+  .navbar.active {
+    opacity: 0.95;
+    visibility: visible;
+    transform: translateX(0);
+  }
+  
+  /* Stack navigation items vertically on mobile */
+  .navbar ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 20px;
+    margin-right: 0;
+  }
+  
+  .navbar ul li {
+    display: block;
+    margin: 12px 0;
+    width: 100%;
+  }
+  
+  .navbar ul li::after {
+    left: 0;
+    transform: none;
+  }
+  
+  .navbar ul li:hover::after {
+    transform: none;
   }
 }
 
