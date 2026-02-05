@@ -15,32 +15,37 @@
     />
     <meta name="theme-color" content="#000000" />
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="css/style.css?v=2.0" />
     <title>Tony A. Akinniranye</title>
   </head>
 
   <body>
     <!-- NAV -->
-    <header class="border">
+    <!-- NAV -->
+<header class="border">
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
       <h1 class="site-name">Tony Akinniranye</h1>
-        <nav class="navbar" aria-label="Primary">
-          <ul>
-            <li><a href="#home">ABOUT</a></li>
-            <li><a href="#skills">SKILLS</a></li>
-            <li><a href="#projects">PROJECTS</a></li>
-            <!-- <li><a href="#certifications">CERTIFICATIONS</a></li> -->
-            <!-- <li><a href="#resume">RESUME</a></li> -->
-            <li><a href="#contact">CONTACT</a></li>
-          </ul>
-        </nav>
 
+      <!-- Hamburger icon -->
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
 
-
-
-
-
-
-    </header>
+    <div id="navbarMenu" class="navbar-menu">
+      <div class="navbar-end">
+        <a href="#home" class="navbar-item">ABOUT</a>
+        <a href="#skills" class="navbar-item">SKILLS</a>
+        <a href="#projects" class="navbar-item">PROJECTS</a>
+        <a href="#contact" class="navbar-item">CONTACT</a>
+      </div>
+    </div>
+  </nav>
+</header>
 
     <!-- HOME -->
     <section id="home">
@@ -546,6 +551,7 @@
     <script src="js/languages.js" defer></script>
     <script src="js/langTicker.js" defer></script>
     <script src="js/themeToggle.js" defer></script>
+    <script src="js/navbar.js" defer></script>
 
 
 
