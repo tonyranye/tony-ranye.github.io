@@ -1,6 +1,5 @@
 # 🌐 Web-Dev Practice
-
-Welcome to my personal website! This is a digital space where I record my projects as a Computer Science undergraduate, highlight my projects, share professional experiences, and express my passion for tech.
+This is a digital space where I record my projects as a Computer Science undergraduate, highlight my projects, share professional experiences, and express my passion for tech.
 
 ## 🧠 About Me
 
